@@ -29,6 +29,13 @@ This assignment evaluates your skills in:
 4. **TypeScript** - Type safety and proper typing throughout
 5. **Code quality** - Clean, maintainable code with attention to detail
 
+## Getting Started
+
+1. Clone this repository to your local machine
+2. Install dependencies
+3. Understand the requirements
+4. Start building!
+
 ## The Challenge
 
 You'll build a simple chat interface that allows users to query job and salary information stored in JSON files. Think of it as a basic HR assistant that can answer questions about job descriptions and compensation. The interface doesn't have to be anything fancy.
