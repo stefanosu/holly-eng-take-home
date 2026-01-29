@@ -40,6 +40,10 @@ This assignment evaluates your skills in:
 
 You'll build a simple chat interface that allows users to query job and salary information stored in JSON files. Think of it as a basic HR assistant that can answer questions about job descriptions and compensation. The interface doesn't have to be anything fancy.
 
+### Note on Scale
+The included JSON datasets are intentionally small to keep this take-home manageable and avoid overwhelm. However, **please design your approach as if the datasets could grow significantly** (e.g., 10×–100× more records).
+We’re looking for evidence that your solution would remain efficient and maintainable as data grows—**without requiring you to build a full production system**. If you choose a simpler approach given time constraints, explain how you would scale it in your writeup.
+
 ## Requirements
 
 ### 1. Chat Interface
@@ -54,7 +58,8 @@ You'll build a simple chat interface that allows users to query job and salary i
 
 - Integrate with an LLM of your choice
 - The LLM should be able to answer questions about the data in the job descriptions and salaries datasets
-- **Critical Requirement**: Your implementation should parse the user's query to identify which specific job they're asking about, and only pass the relevant job information to the LLM - do not pass the entire dataset to the LLM with each request
+- **Critical Requirement**: Your implementation should parse the user's query to identify which specific job they're asking about, and only pass the relevant job information to the LLM - **do not pass the entire dataset** to the LLM with each request.
+- **Scalability expectation**: Even though the provided dataset is small, structure your matching + filtering so it would still work well as the dataset grows.
 - Example queries and responses:
   - "What are the knowledge, skills, and abilities for the Assistant Sheriff San Diego County position?"
     - "The Assistant Sheriff in San Diego County should have knowledge of: local law enforcement agencies in San Diego County, local/state/federal laws, law enforcement rules and regulations, community-based policing..."
@@ -72,7 +77,7 @@ You'll build a simple chat interface that allows users to query job and salary i
 
 We'll be evaluating:
 
-1. **Data Processing Efficiency** - How efficiently you process and filter data before sending to the LLM (this is a key evaluation point)
+1. **Data Processing Efficiency & Scalability** - How efficiently you process and filter data before sending to the LLM, and whether your approach is designed to scale as data grows (this is a key evaluation point)
 2. **Matching Strategy** - Your approach to matching user queries to job records without fuzzy matching - we're interested in seeing creative and effective solutions
 3. **Code Quality** - Clean, maintainable code without debug artifacts
 4. **Attention to Detail** - Accurate understanding of the data and consistent documentation
