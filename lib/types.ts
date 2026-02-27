@@ -7,7 +7,15 @@ export interface JobDescription {
 } 
 
 export interface SalaryRecord {
-    salaryGrades: string[]
+    Jurisdiction: string
+    "Job Code": string
+    [key: string]: string
+}
+
+export interface JobListing {
     jurisdiction: string
-    jobCode: string
+    code: string
+    title: string
+    description: string
+    salaryGrades: string[]
 }
