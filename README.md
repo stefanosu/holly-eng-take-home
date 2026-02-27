@@ -101,3 +101,11 @@ Please submit:
 - Focus on demonstrating your understanding of Next.js patterns, TypeScript, and clean code organization
 - Don't spend too much time on UI aesthetics - functionality is the priority
 - **We'll be evaluating how efficiently you process and filter data before sending to the LLM** - this is a core requirement
+
+## Running Locally
+
+1. Clone the repo
+2. Run `npm install`
+3. Create a `.env.local` file with `ANTHROPIC_API_KEY=your_key_here`
+4. Run `npm run dev`
+5. Navigate to `http://localhost:3000/chat`
